@@ -32,21 +32,41 @@
   </nav>
 
     <div class="container">
+<?php
+if(isset($_GET["msg"]))
+{
+	if($_GET["msg"]=="err")
+	{
+echo"<div class='card-panel red red'>Invalid Email/ Password</div>
+";
+	}
+	else
+	{
+	echo"
+	
+	    <div class='card-panel teal green'>Your Have been Registered Successfully, Now Login To Proceed</div>
 
+	";	
+	}
+	
+}
+
+
+?>
       <form action="login-sys.php" method="post">
 	  <div class="card-panel">
       <span class="blue-text text-darken-2"><h5>Vendor Login</h5></span>
 
 	  	<div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" name="email" class="validate">
+          <input id="email" type="email" name="username" class="validate">
           <label for="email">Email</label>
         </div>
       </div>
 
 	    <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="password" name="pass" class="validate">
+          <input id="email" type="password" name="password" class="validate">
           <label for="email">Password</label>
         </div>
       </div>

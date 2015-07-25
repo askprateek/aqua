@@ -1,3 +1,6 @@
+<?php
+include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Waterworks</title>
+  <title>AQUA</title>
 
   <!-- Bootstrap -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -24,14 +27,30 @@
     <div class="nav-wrapper white">
       <a href="#" class="brand-logo center" style="color:#00BCD4;">Waterworks</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a style="color:#00BCD4;">Hello Vendor here</a></li>
+       <li><a style="color:#00BCD4;">Hello <?php
+	   echo $user_check;	   ?></a></li>
+	   
+	   <li><a href="logout.php"  style="color:#00BCD4;">Logout</a></li>
      </ul>
     </div>
+	
   </nav>
 
   <div class="container">
     <div class="row">
       <div class="col s6">
+	  <?php
+	  if(isset($_GET["msg"]))
+	  {
+		 if($_GET["msg"]=="updated")
+		 {
+			 echo"
+			     <div class='card-panel teal green'>Your Data Has Been Updated</div>
+
+			 ";
+		 }			 
+	  }
+	  ?>
         <table class="bordered white" style ="margin-top:10px;border-radius:3px;">
           <thead>
             <tr>
@@ -42,18 +61,150 @@
           </thead>
 
           <tbody>
-            <tr>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "aqua";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM `vendor` where email='$user_check'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+$_SESSION["vid"]=$row["vid"];
+	}
+	
+}
+
+$conn->close();
+?>
+<form action="update.php" method="post">
+<input type="text" value="<?php echo $_SESSION["vid"] ?>" name="vid" hidden>
+		  <tr>
               <td>Bottle</td>
-              <td>5 ltr</td>
-              <td>6</td>
+              <td>10 ltr</td>
+              <td>
+			  <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "aqua";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM `product` where vid='$_SESSION[vid]'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		echo "<input  type='text' name='bottlesmall' class='validate' value='".$row["b10"]."'>";
+	}
+	
+}
+else
+{
+	echo "<input  type='text' name='bottlesmall' class='validate' value='0'>";
+}
+$conn->close();
+?>
+			  </td>
+            </tr>
+			 <tr>
+              <td>Bottle</td>
+              <td>20 ltr</td>
+              <td>  <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "aqua";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM `product` where vid='$_SESSION[vid]'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		echo "<input  type='text' name='bottlebig' class='validate' value='".$row["b20"]."'>";
+	}
+	
+}
+else
+{
+	echo "<input  type='text' name='bottlebig' class='validate' value='0'>";
+}
+$conn->close();
+?></td>
             </tr>
             <tr>
               <td>Tanker</td>
               <td>200 ltr</td>
-              <td>3</td>
+              <td>
+
+
+
+			  <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "aqua";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM `product` where vid='$_SESSION[vid]'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		echo "<input  type='text' name='tank' class='validate' value='".$row["tank"]."'>";
+	}
+	
+}
+else
+{
+	echo "<input  type='text' name='tank' class='validate' value='0'>";
+}
+$conn->close();
+?></td>
             </tr>
+			<tr>
+			<td></td><td></td>
+			<td>
+			<center>
+			<button type="submit" class="waves-effect waves-light btn">Update Stock</button>
+			</center>
+			</td>
+			</tr>
           </tbody>
-        </table>
+
+		  </table>
 
 
 
