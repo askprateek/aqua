@@ -26,8 +26,8 @@
     <div class="nav-wrapper white">
       <a href="#" class="brand-logo center" style="color:#00BCD4;">Waterworks</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href ="vender/login.php" style="color:#00BCD4;">Vender Login</a></li>
-        <li><a href ="vender/signup.php" style="color:#00BCD4;">Vender Signup</a></li>
+        <li><a href ="vendor/login.php" style="color:#00BCD4;">Vender Login</a></li>
+        <li><a href ="vendor/signup.php" style="color:#00BCD4;">Vender Signup</a></li>
       </ul>
     </div>
   </nav>
