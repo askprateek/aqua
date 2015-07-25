@@ -29,7 +29,7 @@ if ($rows == 1) {
 $_SESSION['login_user']=$logusername; // Initializing Session
 
 
-	header("location: place_order.php");
+	header("location: home/index.php");
 
 
 

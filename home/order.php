@@ -1,9 +1,8 @@
 <?php
 $zip=$_POST["zip"];
-$name=$_POST["name"];
-$email=$_POST["email"];
-$phone=$_POST["phone"];
-$pass=$_POST["pass"];
+$type=$_POST["type"];
+$quantity=$_POST["quantity"];
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -16,13 +15,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO user (name, uzip, email, phone, password)
-VALUES ('$name', '$zip', '$email', '$phone', '$pass')";
+$sql = "INSERT INTO request (pid, vid, quantity)
+VALUES ('John', 'Doe', 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
-    header("location: index.php?msg=success");
+    echo "New record created successfully";
 } else {
-    header("location: index.php");
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
