@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST['username'])!=null)
 {
 $logusername=$_POST['username'];
-$logpassword=$_POST['password'];
+$logpassword=$_POST['pass'];
 $servername = "localhost";
 $username = "root";
 $password = "";
