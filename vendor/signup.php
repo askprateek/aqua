@@ -22,21 +22,17 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-          
+
   </head>
-  <body>
-
-
- 
-          
+  <body class="cyan">
   <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">AQUA</a>
+    <div class="nav-wrapper white">
+      <a href="#" class="brand-logo center" style="color:#00BCD4;">AQUA</a>
     </div>
   </nav>
 
     <div class="container">
-    <div class="row card-panel blue lighten-5">
+  
       <form action="vendor-reg.php" method="post">
 	  <div class="card-panel">
       <span class="blue-text text-darken-2"><h5>Vendor Registration</h5></span>
@@ -46,15 +42,15 @@
           <label for="email">Full Name</label>
         </div>
       </div>
-	  
+
 	  	    <div class="row">
         <div class="input-field col s12">
           <input id="email" type="email" name="email" class="validate">
           <label for="email">Email</label>
         </div>
       </div>
-	  
-	  
+
+
 	  <div class="row">
         <div class="input-field col s12">
           <input id="email" type="text" name="zip" class="validate">
@@ -67,18 +63,12 @@
           <label for="email">Password</label>
         </div>
       </div>
-    </div>
 	 <button type="submit" class="waves-effect waves-light btn">Register</button>
-	  
-	  
-	  
+ </div>
 	  </form>
-	  
+
      <script type="text/javascript" src="http://theasp.tk/js/jquery-1.11.1.min.js"></script>
  <!-- Modal Trigger -->
- 
-
-  </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
