@@ -8,7 +8,8 @@
     <title>Waterworks</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
     <link href="css/style.css" rel ="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,12 +19,38 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
 
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Waterworks</a>
+    </div>
+  </nav>
+
+    <div class="container">
+    <div class="row card-panel blue lighten-5">
+      <div class="col s3">
+        <h4> Hello Vendor</h4>
+      </div>
+      <div class="col s9">
+        <h4> ZIPCODE HERE</h4>
+      <div>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col s6">
+        Table: His Products
+    </div>
+
+    <div class="col s6">
+        Notifications
+    </div>
+
+  </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
