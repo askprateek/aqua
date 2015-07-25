@@ -42,12 +42,12 @@ echo"<div class='card-panel red red'>Invalid Email/ Password</div>
 	else
 	{
 	echo"
-	
+
 	    <div class='card-panel teal green'>Your Have been Registered Successfully, Now Login To Proceed</div>
 
-	";	
+	";
 	}
-	
+
 }
 
 
@@ -91,7 +91,7 @@ echo"<div class='card-panel red red'>Invalid Email/ Password</div>
       <div class="modal-content">
         <h4 style="color:#00BCD4;">Register Here</h4>
         <div class="row">
-		<form action="reg.php" method="post">
+		
           <div class="input-field col s12">
             <input id="email" type="text" name="name" class="validate">
             <label for="email">Full Name</label>
