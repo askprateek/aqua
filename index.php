@@ -55,7 +55,7 @@ echo"<div class='card-panel red red'>Invalid Email/ Password</div>
   <div class="container">
     <div class="row">
       <div class="col s10 col offset-s1 valign wrapper">
-        <form action="login-sys.php" method="post">
+        <form action="login.php" method="post">
           <div class="card-panel">
             <span class="blue-text text-darken-2 center"><h5 style="color:#00BCD4;">User login</h5></span>
 
@@ -87,11 +87,11 @@ echo"<div class='card-panel red red'>Invalid Email/ Password</div>
   </div>
   <!-- Modal Structure -->
   <div id="signup" class="modal">
-    <form method ="POST" action="user-register.php">
+    <form method ="POST" action="register.php">
       <div class="modal-content">
         <h4 style="color:#00BCD4;">Register Here</h4>
         <div class="row">
-		
+
           <div class="input-field col s12">
             <input id="email" type="text" name="name" class="validate">
             <label for="email">Full Name</label>
