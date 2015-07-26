@@ -132,15 +132,34 @@ include('session.php');
         </div>
       </div>
 
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="date" class="datepicker">
+          <label for="textarea1">Enter From Date</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="date" class="datepicker">
+          <label for="textarea1">Enter To Date</label>
+        </div>
+      </div>
   </div>
-    <button type="submit" class="waves-effect waves-light btn">Proceed For Payment</button></form>
+
+
+  <!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/bdg_payments_by_pp_2line.png" border="0" alt="Payments by PayPal"></a><div style="text-align:center"><a href="https://www.paypal.com/webapps/mpp/how-paypal-works"><font size="2" face="Arial" color="#0079CD"></font></div></td></tr></table><!-- PayPal Logo -->
+    <button type="submit" class="waves-effect waves-light btn ">Proceed For Payment</button></form>
           </div>
 
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
     <script src="js/script.js"></script>
+    <script>$('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+      });
+           </script>
   </body>
   </html>
