@@ -106,7 +106,7 @@ echo"<div class='card-panel red red'>Invalid Email/ Password</div>
         </div>
 		 <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" name="phone" class="validate">
+            <input id="text" type="text" name="phone" class="validate">
             <label for="email">Phone Number</label>
           </div>
         </div>
@@ -119,7 +119,7 @@ echo"<div class='card-panel red red'>Invalid Email/ Password</div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="waves-effect waves-light btn">Login</button>
+        <button type="submit" class="waves-effect waves-light btn">Register</button>
       </div>
     </form>
   </div>

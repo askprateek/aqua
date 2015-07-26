@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,12 +17,12 @@
 </head>
 
 <body>
-<div class="image-container set-full-height" style="background-image: url('images/wizard.jpg')">
+<div class="image-container set-full-height" style="background-image: url('../images/wizard.jpg')">
     <!--   Creative Tim Branding   -->
     <a href="index.html">
          <div class="logo-container">
             <div class="logo">
-                <img src="icon.png">
+                <img src="../icon.png">
             </div>
             <div class="brand">
                 AQUA
@@ -36,7 +37,7 @@
 
             <!--      Wizard container        -->
             <div class="wizard-container">
-                <form action="order-place.php" method="post">
+
                 <div class="card wizard-card ct-wizard-orange" id="wizard">
 
                 <!--        You can switch "ct-wizard-orange"  with one of the next bright colors: "ct-wizard-blue", "ct-wizard-green", "ct-wizard-orange", "ct-wizard-red"             -->
@@ -54,10 +55,10 @@
                               <div class="row"><br/><br/>
                                   <h4 class="info-text"> Enter Your ZIP Code</h4>
 
-<form action="userorder.php" method="post">
+<form action="order.php" method="get">
 
 <center>
-                                        <input type="text" style="width:500px;height:60px;font-size:35px;" id="zipcode" name="zip" placeholder="Zip Code...">
+	  <input type="text" style="width:500px;height:60px;font-size:35px;" id="zipcode" name="zip" placeholder="Zip Code...">
 </center>
 
 
@@ -70,7 +71,7 @@
                                     <div class="col-sm-10 col-sm-offset-1">
                                         <div class="col-sm-4">
                                             <div class="choice" data-toggle="wizard-radio">
-                                                <input type="radio" name="type" value="10l">
+                                                <input type="radio" name="type" value="b10">
                                                 <div class="icon">
                                                     <i class="fa fa-pencil"></i>
                                                 </div>
@@ -79,7 +80,7 @@
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="choice" data-toggle="wizard-radio">
-                                                <input type="radio" name="type" value="20l">
+                                                <input type="radio" name="type" value="b20">
                                                 <div class="icon">
                                                     <i class="fa fa-terminal"></i>
                                                 </div>
@@ -115,7 +116,7 @@
                                     </div>
 
 																		<center>
-							<input type="number" name="quantity" min="1" max="5" style="width:500px;height:60px;font-size:35px;">
+							<input type="number" name="quantity" min="1" max="500" style="width:500px;height:60px;font-size:35px;">
 																		</center>
                                 </div>
                             </div>
@@ -158,11 +159,11 @@
 
 </body>
 
-    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--   plugins 	 -->
-	<script src="js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
-	<script src="js/wizard.js"></script>
+	<script src="../js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+	<script src="../js/wizard.js"></script>
 
 </html>
