@@ -1,4 +1,6 @@
-
+<?php
+include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +29,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
        <li><a style="color:#00BCD4;">Hello </a></li>
 
-	   <li><a href="logout.php"  style="color:#00BCD4;">Logout</a></li>
+	   <li><a href="../vendor/logout.php"  style="color:#00BCD4;">Logout</a></li>
      </ul>
     </div>
 
@@ -37,8 +39,9 @@
     <div class="row">
       <div class="col s6">
  <form action='submitorder.php' method="post">
-<input type='text' name="pid" value="<?php echo $_GET["type"]?>" >
 
+<input type='text' name="pid" value="<?php echo $_GET["type"]?>" hidden >
+<input type='text' name="quantity" value="<?php echo $_GET["quantity"]?>" hidden >
           <?php
           $zip=$_GET["zip"];
           $type=$_GET["type"];
@@ -130,7 +133,7 @@
       </div>
 
   </div>
-    <button type="submit" class="waves-effect waves-light btn">Place Order</button></form>
+    <button type="submit" class="waves-effect waves-light btn">Proceed For Payment</button></form>
           </div>
 
     </div>
